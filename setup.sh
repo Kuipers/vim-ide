@@ -1,7 +1,9 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 mv ~/.vimrc ~/vimrc.bak
-ln -sf vimrc ~/.vimrc
+ln -sf ${DIR}/vimrc ~/.vimrc
 
 sudo apt update
 sudo apt install build-essential cmake
